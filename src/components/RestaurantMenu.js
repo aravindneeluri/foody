@@ -33,7 +33,7 @@ const RestaurantMenu = () => {
         <h3>{restaurant?.locality}</h3>
       </div>
       <div>
-        <h1 className="font-semibold justify-center"> Menu</h1>
+        <h1 className="font-semibold justify-center px-5" > Menu</h1>
         <h4>
           {Object.values(restaurant?.menu?.items).map((item) => (
             <li key={item.id} className="flex p-3 m-2">
@@ -44,15 +44,14 @@ const RestaurantMenu = () => {
               -{" "}
               <button
                 className="bg-gray-200 shadow-md p-2 m-2 text-xs"
-                onClick={() => addFoodItem()}
+                onClick={() => addFoodItem(item)}
               >
-                {" "}
-                add{" "}
+                add
               </button>
             </li>
           ))}
         </h4>
-      </div>
+      </div>  
     </div>
   );
 };
